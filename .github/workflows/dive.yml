@@ -8,9 +8,9 @@ jobs:
     name: Analyze image efficiency
     steps:
       - name: Checkout
-        uses: priyankachouk/dive@main
+        uses: priyankachouk/dive
       - name: Build image
-        run: docker build -t sample:latest node-starter/.
+        run: docker build -t sample:latest node-starter/Dockerfile
       - name: Dive
         uses: priyankachouk/dive@main
         with:
