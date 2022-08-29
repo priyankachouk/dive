@@ -15,5 +15,5 @@ jobs:
         uses: priyankachouk/dive@main
         with:
           image: "sample:latest"
-          config-file: ${{ github.workspace }}/node-starter/.dive-ci.yml
+          config-file: node-starter/.dive-ci.yml
           github-token: ${{ secrets.GITHUB_TOKEN }}
