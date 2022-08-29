@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build image
-        run: docker build -t sample:latest .
+        run: docker build -t sample:latest -f node-starter/Dockerfile node-starter/.
       - name: Dive
         uses: priyankachouk/dive@main
         with:
