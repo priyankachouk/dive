@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build image
-        run: docker build -t sample:latest .
+        run: docker build -t sample:latest node-starter/Dockerfile
       - name: Dive Action
         uses: yuichielectric/dive-action@0.0.4
         with:
