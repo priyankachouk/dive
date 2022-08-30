@@ -15,5 +15,5 @@ jobs:
         uses: yuichielectric/dive-action@0.0.4
         with:
           image: "dive1:latest"
-          config-file: node-starter/.dive-ci
+          config-file: ./.dive-ci
           github-token: ${{ secrets.GITHUB_TOKEN }}
