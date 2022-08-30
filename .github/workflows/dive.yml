@@ -10,10 +10,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build image
-        run: docker build -t dive1:latest .
-      - name: Dive Action
+        run: docker build -t sample1:latest .
+      - name: Dive
         uses: yuichielectric/dive-action@0.0.4
         with:
-          image: "dive1:latest"
-          config-file: ./.dive-ci.yml
+          image: "sample1:latest"
+          config-file: ${{ github.workspace }}/.dive-ci.yml
           github-token: ${{ secrets.GITHUB_TOKEN }}
