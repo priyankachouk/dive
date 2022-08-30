@@ -9,7 +9,6 @@
 #
 ## Remove apt cache to make the image smaller
 #RUN rm -rf /var/lib/apt/lists/*
-#
 #CMD bash
 
 
