@@ -12,10 +12,10 @@ jobs:
       - name: Build image
         run: docker build -t sample1:latest .
       - name: pwd
-        run: pwd && ls
+        run: pwd && ls -la
       - name: Dive
         uses: yuichielectric/dive-action@0.0.4
         with:
           image: "sample1:latest"
-          config-file: /home/runner/work/dive/dive/.dive-ci.yml
+          config-file: /home/runner/work/dive/dive/dive-conf.yaml
           github-token: ${{ secrets.GITHUB_TOKEN }}
