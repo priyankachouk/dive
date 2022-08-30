@@ -17,5 +17,5 @@ jobs:
         uses: yuichielectric/dive-action@0.0.4
         with:
           image: "sample1:latest"
-          config-file: /home/runner/work/dive/dive/dive-conf.yaml
+          config-file: ${{ github.workspace }}/.dive-ci.yml
           github-token: ${{ secrets.GITHUB_TOKEN }}
