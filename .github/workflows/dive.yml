@@ -11,9 +11,11 @@ jobs:
         uses: actions/checkout@v2
       - name: Build image
         run: docker build -t sample1:latest .
+      - name: pwd
+        run: pwd && ls
       - name: Dive
         uses: yuichielectric/dive-action@0.0.4
         with:
           image: "sample1:latest"
-          config-file: /.dive-ci.yml
+          config-file: node-starter/.dive-ci.yml
           github-token: ${{ secrets.GITHUB_TOKEN }}
